@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehran Safarali | Resume</title>
+  <meta name="description" content="Mehran Safarali - Backend Software Engineer Resume" />
+  <meta name="keywords" content="Mehran Safarali, Resume, Backend Engineer, Golang Developer, Snapp, Software Engineer, Iran" />
+  <meta name="author" content="Mehran Safarali" />
+  <link rel="canonical" href="https://safarali.ir/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://safarali.ir/" />
+  <meta property="og:title" content="Mehran Safarali | Backend Software Engineer" />
+  <meta property="og:description" content="Resume and professional portfolio of Mehran Safarali — Backend Engineer specialized in Golang, Microservices, Kubernetes, Docker, and distributed systems." />
+  <meta property="og:image" content="https://safarali.ir/profile.jpg" />
+  <meta property="og:image:alt" content="Profile photo of Mehran Safarali" />
+  <meta property="og:site_name" content="Mehran Safarali Resume" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mehran Safarali | Backend Software Engineer" />
+  <meta name="twitter:description" content="Backend Engineer with experience in Golang, Kubernetes, Docker, Microservices and scalable backend systems." />
+  <meta name="twitter:image" content="https://safarali.ir/profile.jpg" />
+
+  <link rel="icon" type="image/png" href="https://safarali.ir/profile.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mehran Safarali",
+    "image": "https://safarali.ir/profile.jpg",
+    "jobTitle": "Backend Engineer",
+    "email": "mailto:safarali.mehran@gmail.com",
+    "url": "https://safarali.ir",
+    "sameAs": [
+      "https://linkedin.com/in/mhrsfr"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#050816;
+      --bg2:#0a1024;
+      --card:rgba(255,255,255,.08);
+      --card-strong:rgba(255,255,255,.12);
+      --border:rgba(255,255,255,.14);
+      --text:#eaf2ff;
+      --muted:#a8b3cf;
+      --accent:#7c9cff;
+      --accent2:#7cf0ff;
+      --accent3:#c084fc;
+      --shadow:0 20px 70px rgba(0,0,0,.45);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(124,156,255,.22), transparent 25%),
+        radial-gradient(circle at 85% 10%, rgba(124,240,255,.16), transparent 22%),
+        radial-gradient(circle at 50% 100%, rgba(192,132,252,.15), transparent 30%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    .bg-grid{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.25;
+      background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
+    }
+
+    .orb{
+      position:fixed;
+      border-radius:50%;
+      filter: blur(30px);
+      opacity:.28;
+      pointer-events:none;
+      animation: float 14s ease-in-out infinite;
+    }
+    .orb.o1{width:260px;height:260px;left:-60px;top:120px;background:#7c9cff;}
+    .orb.o2{width:220px;height:220px;right:-60px;top:220px;background:#7cf0ff;animation-delay:-4s;}
+    .orb.o3{width:280px;height:280px;left:30%;bottom:-90px;background:#c084fc;animation-delay:-8s;}
+
+    @keyframes float{
+      0%,100%{transform:translateY(0) translateX(0) scale(1)}
+      50%{transform:translateY(-18px) translateX(10px) scale(1.05)}
+    }
+
+    .wrap{
+      width:min(1180px, calc(100% - 32px));
+      margin:0 auto;
+      padding:28px 0 48px;
+      position:relative;
+      z-index:1;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:22px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      border-radius:999px;
+      backdrop-filter: blur(12px);
+    }
+
+    .pill .dot{
+      width:8px;height:8px;border-radius:50%;
+      background:linear-gradient(135deg, var(--accent2), var(--accent3));
+      box-shadow:0 0 18px rgba(124,240,255,.65);
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.3fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.06));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      overflow:hidden;
+      position:relative;
+      animation: fadeUp .9s ease both;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg, rgba(255,255,255,.08), transparent 35%, transparent 70%, rgba(255,255,255,.05));
+      pointer-events:none;
+    }
+
+    .hero-main{
+      padding:34px;
+      position:relative;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 14px;
+      border-radius:999px;
+      background:rgba(124,156,255,.12);
+      color:#d7e4ff;
+      border:1px solid rgba(124,156,255,.18);
+      font-size:13px;
+      margin-bottom:18px;
+    }
+
+    .eyebrow b{
+      color:var(--accent2);
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(34px, 5vw, 62px);
+      line-height:1.03;
+      letter-spacing:-.03em;
+    }
+
+    .subtitle{
+      margin:14px 0 0;
+      font-size:18px;
+      color:var(--muted);
+      line-height:1.8;
+      max-width: 62ch;
+    }
+
+    .meta-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .meta{
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .meta label{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      margin-bottom:6px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .meta span{
+      font-size:15px;
+      font-weight:600;
+      color:var(--text);
+      word-break:break-word;
+    }
+
+    .hero-side{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .photo{
+      padding:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100%;
+    }
+
+    .photo-inner{
+      width:100%;
+      border-radius:24px;
+      overflow:hidden;
+      aspect-ratio: 4 / 5;
+      border:1px solid rgba(255,255,255,.1);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      position:relative;
+    }
+
+    .photo-inner img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.01);
+    }
+
+    .photo-fallback{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:24px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+      background:
+        radial-gradient(circle at top, rgba(124,240,255,.18), transparent 40%),
+        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+    }
+
+    .mini-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .stat{
+      padding:16px 14px;
+      text-align:center;
+      border-radius:20px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .stat strong{
+      display:block;
+      font-size:20px;
+      margin-bottom:4px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .section{
+      margin-top:22px;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin:26px 0 14px;
+    }
+
+    .section-title h2{
+      margin:0;
+      font-size:22px;
+      letter-spacing:-.02em;
+    }
+
+    .section-title .line{
+      height:1px;
+      flex:1;
+      background:linear-gradient(90deg, rgba(124,156,255,.7), rgba(255,255,255,.15));
+    }
+
+    .panel{
+      padding:24px;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .chip{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      color:#edf3ff;
+      font-size:14px;
+      transition:transform .25s ease, background .25s ease, border-color .25s ease;
+    }
+    .chip:hover{
+      transform:translateY(-2px);
+      background:rgba(124,156,255,.14);
+      border-color:rgba(124,156,255,.28);
+    }
+
+    .timeline{
+      display:grid;
+      gap:16px;
+    }
+
+    .item{
+      display:grid;
+      grid-template-columns: 180px 1fr;
+      gap:18px;
+      padding:18px;
+      border-radius:20px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      transition:transform .28s ease, border-color .28s ease, background .28s ease;
+    }
+    .item:hover{
+      transform:translateY(-3px);
+      border-color:rgba(124,240,255,.22);
+      background:rgba(255,255,255,.07);
+    }
+
+    .item .date{
+      color:var(--accent2);
+      font-size:13px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+    }
+
+    .item h3{
+      margin:0 0 6px;
+      font-size:18px;
+    }
+
+    .item p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+
+    .tag{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(124,240,255,.08);
+      color:#dffcff;
+      border:1px solid rgba(124,240,255,.12);
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+
+    .project{
+      padding:20px;
+      border-radius:20px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      min-height:100%;
+    }
+
+    .project h3{
+      margin:0 0 8px;
+      font-size:17px;
+    }
+
+    .project p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:14px;
+    }
+
+    .footer{
+      margin-top:24px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      padding:18px 0 8px;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      animation: fadeUp .9s ease forwards;
+    }
+    .delay-1{animation-delay:.08s}
+    .delay-2{animation-delay:.16s}
+    .delay-3{animation-delay:.24s}
+    .delay-4{animation-delay:.32s}
+
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(18px)}
+      to{opacity:1; transform:translateY(0)}
+    }
+
+    @media (max-width: 980px){
+      .hero,
+      .projects,
+      .item{
+        grid-template-columns:1fr;
+      }
+      .mini-stats{
+        grid-template-columns:1fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px){
+      .wrap{width:min(100% - 20px, 1180px); padding-top:16px}
+      .topbar{flex-direction:column; align-items:flex-start}
+      .hero-main{padding:22px}
+      .panel{padding:18px}
+      .meta-grid{grid-template-columns:1fr}
+      .mini-stats{grid-template-columns:1fr}
+      h1{font-size:34px}
+      .subtitle{font-size:16px}
+      .section-title h2{font-size:20px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+
+  <div class="wrap">
+    <div class="topbar reveal delay-1">
+      <div class="pill"><span class="dot"></span> Interactive Resume</div>
+      <div>Last Update: July 2025</div>
+    </div>
+
+    <section class="hero">
+      <div class="card hero-main reveal delay-2">
+        <div class="eyebrow"><b>Backend</b> Software Engineer</div>
+        <h1>Mehran Safarali</h1>
+        <p class="subtitle">
+          Curious about how software, websites, and systems work both on the surface and behind the scenes.
+          Experienced across operations, sales, marketing, and software development with a business-oriented mindset.
+        </p>
+
+        <div class="meta-grid">
+          <div class="meta">
+            <label>Email</label>
+            <span><a href="mailto:safarali.mehran@gmail.com" style="color:inherit;text-decoration:none;">safarali.mehran@gmail.com</a></span>
+          </div>
+          <div class="meta">
+            <label>Phone</label>
+            <span><a href="tel:+989127642279" style="color:inherit;text-decoration:none;">(+98) 912 764 22 79</a></span>
+          </div>
+          <div class="meta">
+            <label>LinkedIn</label>
+            <span><a href="https://linkedin.com/in/mhrsfr" target="_blank" style="color:inherit;text-decoration:none;">linkedin.com/in/mhrsfr</a></span>
+          </div>
+          <div class="meta">
+            <label>Birth</label>
+            <span>July 01, 1991 — Tehran</span>
+          </div>
+        </div>
+
+        <div class="tags" style="margin-top:18px">
+          <span class="tag">Golang</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="card photo reveal delay-3">
+          <div class="photo-inner">
+            <img src="profile.jpg" alt="Mehran Safarali">
+            <div class="photo-fallback" id="fallback">
+              Add your photo as <b>profile.jpg</b><br><br>
+              If the image is missing, this fallback text will appear.
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-stats reveal delay-4">
+          <div class="card stat">
+            <strong>6+</strong>
+            <span>Companies</span>
+          </div>
+          <div class="card stat">
+            <strong>13+</strong>
+            <span>Years Experience</span>
+          </div>
+          <div class="card stat">
+            <strong>15+</strong>
+            <span>Tools & Skills</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section">
+      <div class="section-title reveal delay-1">
+        <h2>Skills</h2><div class="line"></div>
+      </div>
+      <div class="card panel reveal delay-2">
+        <div class="chips">
+          <span class="chip">Golang</span>
+          <span class="chip">RestAPI</span>
+          <span class="chip">Git</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Kubernetes (OpenShift)</span>
+          <span class="chip">Grafana</span>
+          <span class="chip">Jaeger</span>
+          <span class="chip">Linux</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Redis</span>
+          <span class="chip">NATS</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Python</span>
+          <span class="chip">PHP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title reveal delay-1">
+        <h2>Work Experience</h2><div class="line"></div>
+      </div>
+      <div class="card panel reveal delay-2">
+        <div class="timeline">
+          <div class="item">
+            <div class="date">Jul 2023 – Jun 2025</div>
+            <div>
+              <h3>Snapp — Software Engineer, Backend (NBO Team)</h3>
+              <p>
+                Worked on the New Back Office platform. Contributed to backend services using Golang and microservices architecture.
+                Designed and maintained internal tools such as authorization services, job schedulers, and file upload handlers.
+                Collaborated with DevOps and product teams to ensure reliability and scalability.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="date">Feb 2022 – Jun 2023</div>
+            <div>
+              <h3>Snapp Box — Senior Operations Specialist</h3>
+              <p>
+                Owned operational performance of key partner accounts. Managed order pricing, fleet productivity,
+                and decision-making through data-driven analysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="date">Jun 2020 – Jan 2021</div>
+            <div>
+              <h3>Banitro — Technical Product Manager</h3>
+              <p>
+                Led the development team and contributed to backend implementation using PHP.
+                Gathered and analyzed business requirements and translated them into technical specs.
+                Oversaw roadmap design and development lifecycle coordination.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="date">Mar 2017 – Jan 2018</div>
+            <div>
+              <h3>Snapp — Offline Marketing Supervisor</h3>
+              <p>
+                Supervised nationwide field teams. Executed offline campaigns including billboards, events,
+                and on-ground promotions to boost user acquisition.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="date">Jul 2013 – Dec 2015</div>
+            <div>
+              <h3>Asan Pardakht Persian (AP) — IPG Administrator</h3>
+              <p>
+                Supported merchant developers integrating payment gateways. Worked closely with backend teams
+                on issue diagnosis and troubleshooting.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="date">Apr 2011 – Aug 2013</div>
+            <div>
+              <h3>Negar Andishan Javan</h3>
+              <p>
+                Prepared project documentation and led timelines for software products in healthcare and education automation systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title reveal delay-1">
+        <h2>Education</h2><div class="line"></div>
+      </div>
+      <div class="card panel reveal delay-2">
+        <div class="timeline">
+          <div class="item">
+            <div class="date">2022 – Now</div>
+            <div>
+              <h3>Master of Information Technology Management</h3>
+              <p>Azad University of Science and Research</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="date">2013</div>
+            <div>
+              <h3>Bachelor of Engineering Software Technology</h3>
+              <p>Islamic Azad University of Parand</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="date">2010 – Now</div>
+            <div>
+              <h3>English Language</h3>
+              <p>Iran-Australia Language School</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title reveal delay-1">
+        <h2>Projects & Services</h2><div class="line"></div>
+      </div>
+      <div class="card panel reveal delay-2">
+        <div class="projects">
+          <div class="project">
+            <h3>Professional User Management Service</h3>
+            <p>Centralized authorization layer for user identity, service accounts, and token-based access control.</p>
+          </div>
+          <div class="project">
+            <h3>Tractor</h3>
+            <p>Part of listed projects/services from the original resume.</p>
+          </div>
+          <div class="project">
+            <h3>Hulk</h3>
+            <p>Part of listed projects/services from the original resume.</p>
+          </div>
+          <div class="project">
+            <h3>Invoker</h3>
+            <p>Part of listed projects/services from the original resume.</p>
+          </div>
+          <div class="project">
+            <h3>Officer</h3>
+            <p>Part of listed projects/services from the original resume.</p>
+          </div>
+          <div class="project">
+            <h3>Hermes</h3>
+            <p>Part of listed projects/services from the original resume.</p>
+          </div>
+          <div class="project">
+            <h3>File Upload & Object Storage
